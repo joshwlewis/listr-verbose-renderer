@@ -43,7 +43,8 @@ class VerboseRenderer {
 	constructor(tasks, options) {
 		this._tasks = tasks;
 		this._options = Object.assign({
-			dateFormat: 'HH:mm:ss'
+			dateFormat: 'HH:mm:ss',
+			stream: process.stdout
 		}, options);
 	}
 
@@ -52,12 +53,12 @@ class VerboseRenderer {
 	}
 
 	render() {
-		cliCursor.hide();
+		cliCursor.hide(this._options.stream);
 		render(this._tasks, this._options);
 	}
 
 	end() {
-		cliCursor.show();
+		cliCursor.show(this._options.stream);
 	}
 }
 

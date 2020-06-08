@@ -44,6 +44,12 @@ Default: `HH:mm:ss`
 
 Format of the rendered timestamp. Use the [date-fns string format](https://date-fns.org/docs/format). If `false` is passed in, the timestamp will be hidden.
 
+### stream
+
+Type: `stream.Writable` <br>
+Default: `process.stdout`
+
+The stream to render to.
 
 ## Related
 

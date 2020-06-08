@@ -1,8 +1,8 @@
 import {serial as test} from 'ava';
 import Listr from 'listr';
 import format from 'date-fns/format';
-import {testOutput} from './fixtures/utils';
 import renderer from '..';
+import {testOutput} from './fixtures/utils';
 
 const date = format(new Date(), 'dd/MM/yyyy');
 
